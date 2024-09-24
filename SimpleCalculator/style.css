@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:  #cae6b5;
+    font-family: Arial, sans-serif;
+}
+.calculator {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+h2 {
+    color: #0000FF;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 15px;
+    padding: 10px;
+    color: yellow;
+    border: 2px solid #e1c7c7;
+    border-radius: 5px;
+    background-color: #d48be0;
+    
+}
+
+.result-display {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.line {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px 0;
+}
+
+#final-result {
+    font-size: 20px;
+    color: #333;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    height: 60px;
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+button:nth-child(4n) {
+    background-color: #FF5722;
+}
+
+button:nth-child(4n):hover {
+    background-color: #E64A19;
+}
+
+button:nth-child(3n) {
+    background-color: #2196F3;
+}
+
+button:nth-child(3n):hover {
+    background-color: #1976D2;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    button {
+        height: 50px;
+        font-size: 20px;
+    }
+
+    input {
+        height: 45px;
+        font-size: 18px;
+    }
+
+    #final-result {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    button {
+        height: 45px;
+        font-size: 18px;
+    }
+
+    input {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    #final-result {
+        font-size: 16px;
+    }
+}
